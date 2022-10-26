@@ -1,33 +1,39 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Me from "./Me.jsx";
+import Benefits from "../components/Benefits.astro";
+import Me from "../components/Me.astro";
 ---
 
 <Layout title="JONAKUHN">
-	<main id="hello" class="mx-[5%] lg:ml-[15%]">
-		<div class="h-screen flex flex-col items-center justify-around">
+	<main id="hello" class="mx-[5%] lg:ml-[15%] lg:mr-[15%] scroll-mt-20">
+		<div class="h-screen relative">
 			<div
-				class="mr-auto mt-[25%] text-lg lg:text-xl md:max-w-[55%] lg:max-w-[45%]"
+				class="mr-auto pt-[30%] md:pt-[15%] text-lg md:text-xl lg:text-2xl md:max-w-[60%]"
 			>
 				<em class="not-italic"
-					><span class="font-main-bold">Hallo!</span> Mein Name ist <span class="font-main-bold">Jona Kuhn</span
-					> ...</em
+					><span class="font-main-bold">Hallo!</span> Mein Name ist
+					<span class="font-main-bold">Jona Kuhn</span> ...</em
 				>
 				<h2>
 					meine Leidenschaft ist Webdesign mit Fokus auf nahe
 					Zusammenarbeit und neuste Technologien 👨🏼‍💻
 				</h2>
 				<br />
-				<h2 class="font-main-bold text-xl">
+				<h2 class="font-main-bold text-xl md:text-2xl">
 					Design - Entwicklung - Hosting
 				</h2>
 			</div>
 			<img
-				class="rounded-[100%] w-[300px] h-[300px] md:w-[400px] md:h-[400px] object-cover ml-auto lg:mr-[10%] mb-[20%]"
+				class="absolute rounded-[100%] w-[300px] h-[300px] md:w-[400px] md:h-[400px] object-cover right-0 top-[45%] md:top-[35%]"
 				src="/me.png"
 			/>
 		</div>
-		<section id="me">
+		<section id="leistungen" class="scroll-mt-[100px]">
+			<Benefits />
+		</section>
+		<br />
+		<br />
+		<section id="me" class="scroll-mt-[100px]">
 			<Me />
 		</section>
 	</main>

@@ -1,0 +1,18 @@
+---
+import Card from "./Card.astro";
+---
+
+<main>
+    <h1 class="text-3xl mb-3">Leistungen</h1>
+    <p class="text-md lg:text-xl">
+        Das sind meine grundsätzlichen Ziele, die bei jeder Website erfüllt
+        sein sollen 💡
+    </p>
+    <br />
+    <div class="grid sm:grid-cols-3 md:grid-cols-4 gap-3">
+        <Card title="Performance" body="Minimale Ladezeiten" img="/benefits/performance.png"/>
+        <Card title="Responsive Design" body="Für alle Geräte" img="/benefits/responsive-design.png"/>
+        <Card title="SEO" body="Nr. 1 bei Google & Co" img="/benefits/seo.png"/>
+        <Card title="Barrierefreiheit" body="Das ist ein Test" img="/benefits/accessibility.png"/>
+    </div>
+</main>

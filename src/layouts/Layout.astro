@@ -19,7 +19,7 @@ const { title } = Astro.props;
 	<body>
 		<div class="flex mt-5 mx-5 items-center">
 			<div class="flex">
-				<a href="/#hello"
+				<a href="/#hello" class="z-10"
 					><img
 						class="h-10 fixed hover:scale-110 hover:cursor-pointer"
 						src="/Logo.png"
@@ -36,7 +36,7 @@ const { title } = Astro.props;
 				class="hidden lg:flex fixed left-1/2 -translate-x-1/2 bg-white rounded-full shadow-own"
 			>
 				<nav class="flex w-[500px] h-10 items-center justify-evenly">
-					<a class="hidden lg:flex" href="/#Me">Über mich</a>
+					<a class="hidden lg:flex" href="/#me">Über mich</a>
 					<a class="hidden lg:flex" href="/Projekte">Projekte</a>
 					<a class="hidden lg:flex" href="/#Kontakt">Kontakt</a>
 				</nav>
@@ -50,7 +50,7 @@ const { title } = Astro.props;
 		<nav class="nav">
 			<ul class="menu font-head text-xl">
 				<li>
-					<a href="/" onclick="closeMenu()">Home</a>
+					<a href="/#hello" onclick="closeMenu()">Home</a>
 				</li>
 				<li>
 					<a href="/#me" onclick="closeMenu()">Über mich</a>
@@ -66,6 +66,10 @@ const { title } = Astro.props;
 
 		<slot />
 
+		<br >
+		<br >
+		<br >
+
 		<script is:inline>
 			function closeMenu() {
 				const checkbox = document.getElementById("side-menu");
@@ -75,7 +79,6 @@ const { title } = Astro.props;
 		<style is:global>
 			html {
 				font-family: "Lexend Deca", sans-serif;
-				height: 2000px;
 				scroll-behavior: smooth;
 			}
 			.shadow-own {
