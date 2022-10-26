@@ -23,18 +23,19 @@ const { title } = Astro.props;
 					><img
 						class="h-10 fixed hover:scale-110 hover:cursor-pointer"
 						src="/Logo.png"
+						alt="Logo"
 					/>
 				</a>
-				<img class="h-10 ml-8" src="/ionaeLogo.png" />
+				<img class="h-10 ml-8" src="/ionaeLogo.png" alt="Logo" />
 			</div>
 
 			<div
 				class="hidden lg:flex fixed left-1/2 -translate-x-1/2 bg-white rounded-full shadow-own"
 			>
 				<nav class="flex w-[500px] h-10 items-center justify-evenly">
-					<a class="hidden lg:flex" href="/#Küche">Über mich</a>
-					<a class="hidden lg:flex" href="/Menue">Projekte</a>
-					<a class="hidden lg:flex" href="/#Küche">Kontakt</a>
+					<a class="hidden lg:flex" href="/#Me">Über mich</a>
+					<a class="hidden lg:flex" href="/Projekte">Projekte</a>
+					<a class="hidden lg:flex" href="/#Kontakt">Kontakt</a>
 				</nav>
 			</div>
 		</div>
@@ -71,13 +72,6 @@ const { title } = Astro.props;
 		<style is:global>
 			html {
 				font-family: "Lexend Deca", sans-serif;
-				background-image: radial-gradient(
-					circle at 50% -2000px,
-					#3788aa7f 30%,
-					#3788aa7f 45%,
-					#3788aa7f 50%,
-					#ffffff 100%
-				);
 				height: 2000px;
 				scroll-behavior: smooth;
 			}
@@ -87,6 +81,16 @@ const { title } = Astro.props;
 			}
 			:global(html) {
 				scroll-behavior: smooth;
+			}
+			body {
+				background-image: radial-gradient(
+					circle at 50% 2000px,
+					#3788aa7f 30%,
+					#3788aa7f 45%,
+					#3788aa7f 50%,
+					#ffffff 100%
+					
+				);
 			}
 		</style>
 	</body>
