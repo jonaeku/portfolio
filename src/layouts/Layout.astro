@@ -19,14 +19,17 @@ const { title } = Astro.props;
 	<body>
 		<div class="flex mt-5 mx-5 items-center">
 			<div class="flex">
-				<a href="/"
+				<a href="/#hello"
 					><img
 						class="h-10 fixed hover:scale-110 hover:cursor-pointer"
 						src="/Logo.png"
 						alt="Logo"
 					/>
 				</a>
-				<img class="h-10 ml-8" src="/ionaeLogo.png" alt="Logo" />
+				<!-- <img class="h-10 ml-8" src="/ionaeLogo.png" alt="Logo" /> -->
+				<div class="h-10 ml-8 flex items-center">
+					<h1 class="text-2xl">JONAKUHN</h1>
+				</div>
 			</div>
 
 			<div
@@ -50,7 +53,7 @@ const { title } = Astro.props;
 					<a href="/" onclick="closeMenu()">Home</a>
 				</li>
 				<li>
-					<a href="/Menue" onclick="closeMenu()">Über mich</a>
+					<a href="/#me" onclick="closeMenu()">Über mich</a>
 				</li>
 				<li>
 					<a href="/#Küche" onclick="closeMenu()">Projekte</a>
