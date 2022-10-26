@@ -2,9 +2,16 @@
     font-family: Lexend Deca;
     src: url("/fonts/Lexend/LexendDeca-Regular.ttf") format("truetype");
 }
+@font-face {
+    font-family: Lexend Deca-Bold;
+    src: url("/fonts/Lexend/LexendDeca-SemiBold.ttf") format("truetype");
+}
 
 .font-main {
     font-family: 'Lexend Deca', sans-serif;
+}
+.font-main-bold {
+    font-family: 'Lexend Deca-Bold', sans-serif;
 }
 
 /* Nav menu */
