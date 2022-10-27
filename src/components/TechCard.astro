@@ -1,0 +1,21 @@
+---
+export interface Props {
+    title: string;
+    img: string;
+}
+
+const { img, title } = Astro.props;
+---
+
+<div
+    class="link-card flex gap-3 items-center text-center bg-white rounded p-1 sm:p-2"
+>
+    <img
+        class="w-[40px] sm:w-[50px] object-contain"
+        src={`${img}`}
+        alt={`${img}`}
+    />
+    <h2>
+        {title}
+    </h2>
+</div>

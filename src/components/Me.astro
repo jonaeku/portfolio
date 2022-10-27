@@ -1,5 +1,5 @@
 ---
-
+import TechCard from "./TechCard.astro";
 ---
 
 <div>
@@ -8,4 +8,15 @@
         Hier bekommt Ihr einen Überblick über die Technologien die ich akutell
         nutze oder zumindest behersche 😉
     </p>
+    <br />
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        <TechCard title="Astro" img="/techStack/astro.svg" />
+        <TechCard title="JavaScript" img="/techStack/js.png" />
+        <TechCard title="TypeScript" img="/techStack/ts.png" />
+        <TechCard title="React" img="/techStack/react.png" />
+        <TechCard title="NextJS" img="/techStack/nextjs.png" />
+        <TechCard title="Tailwind" img="/techStack/tailwind.png" />
+        <!-- <TechCard title="HTML" img="/techStack/html.webp" />
+        <TechCard title="CSS" img="/techStack/css.webp" /> -->
+    </div>
 </div>
