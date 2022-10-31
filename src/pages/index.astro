@@ -2,7 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import Benefits from "../components/Benefits.astro";
 import Me from "../components/Me.astro";
-import Projects from "../components/Projects.astro";
+import ProjectLink from "../components/ProjectLink.astro";
+import Separator from "../components/Separator.astro";
+import Contact from "../components/ContactForm.jsx";
 ---
 
 <Layout title="JONAKUHN">
@@ -33,15 +35,17 @@ import Projects from "../components/Projects.astro";
 		<section id="leistungen" class="scroll-mt-[100px]">
 			<Benefits />
 		</section>
-		<br />
-		<br />
+		<Separator />
 		<section id="me" class="scroll-mt-[100px]">
 			<Me />
 		</section>
-		<br />
-		<br />
+		<Separator />
 		<section id="projekte" class="scroll-mt-[100px]">
-			<Projects />
+			<ProjectLink />
+		</section>
+		<Separator />
+		<section id="kontakt" class="scroll-mt-[100px]">
+			<Contact />
 		</section>
 	</main>
 </Layout>
