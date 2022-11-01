@@ -1,33 +1,45 @@
 ---
+import ProjectCard from "../components/ProjectCard.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<div>
-    <h1 class="text-3xl mb-3">Projekte</h1>
-    <p class="text-md lg:text-xl">
-        Ein Überblick über bereits von mir umgesetzte Projekte 🏁
-    </p>
-    <br />
-    <div class="relative h-[250px] sm:h-[700px]">
-        <a class="absolute w-[55%]" href="https://weingarten-maikammer.de">
-            <img src="/projects/weingarten.png" alt="projekte" />
-        </a>
-        <a class="absolute w-[55%] top-6 sm:top-20   right-0" href="https://mythos-maikammer.de">
-            <img src="/projects/mythos.png" alt="projekte" />
-        </a>
-        <a class="absolute w-[55%] top-20 sm:top-52" href="https://engert-cafe.com">
-            <img src="/projects/engert.png" alt="projekte" />
-        </a>
-        <a class="absolute w-[55%] top-28 sm:top-72 right-0" href="https://weingut-herty.de">
-            <img src="/projects/herty.png" alt="projekte" />
-        </a>
-        <a class="absolute w-[55%] top-40 sm:top-96" href="https://cafebellini.de">
-            <img src="/projects/bellini.png" alt="projekte" />
-        </a>
-    </div>
-</div>
-
-<style>
-    a {
-        cursor: pointer;
-    }
-</style>
+<Layout title="Projekte">
+    <main class="grid md:grid-cols-2 gap-5 w-full mt-10">
+        <ProjectCard
+            title="Weingarten Maikammer"
+            body="Ein schönes Restaurant in Maikammer. Der Weingarten zaubert mit tollem Essen und guten Weinen einen wunderschönen Abend."
+            img="weingarten.png"
+            link="https://weingarten-maikammer.de"
+        />
+        <ProjectCard
+            title="Weinbergsrundfahrt Heilweck"
+            body="Eine Rundfahrt mit dem Planwagen führt Sie aus dem idyllischen Maikammer heraus in die Weinberge. Während der Fahrt können Sie Weine genießen."
+            img="heilweck.png"
+            link="https://planwagen-heilweck.de"
+        />
+        <ProjectCard
+            title="Eiscafé Bellini"
+            body="Auf einer schönen Sonnenterrasse können Sie in aller Ruhe ihre Seele baumeln lassen und Eis-, Kaffee- und Weinspezialitäten genießen."
+            img="bellini.png"
+            link="https://cafebellini.de"
+        />
+        <ProjectCard
+            title="Weingut Herty"
+            body="Im familiengeführten Weingut Herty können Sie die Pfalz in Form von leckeren Weinen nicht nur schmecken, sondern auch erleben."
+            img="herty.png"
+            link="https://weingut-herty.de"
+        />
+        <ProjectCard
+            title="Café Engert"
+            body="Am goldenen Eck in Edenkoben können Sie in einem tollen Ambiente selbstgemachtes Eis und Torten genießen."
+            img="engert.png"
+            link="https://engert-cafe.com"
+        />
+        <ProjectCard
+            title="Mythos Maikammer"
+            body="Ein griechisches Restaurant ganz nach Tradition. Leckere Speisen und Gastfreundschaft erwartet Sie im Myhtos Maikammer."
+            img="mythos.png"
+            link="https://mythos-maikammer.de"
+        />
+    </main>
+</Layout>
