@@ -12,7 +12,7 @@ const ContactForm = () => {
             alert("Bitte geben Sie beim Senden einer Anfrage Ihre Email an!");
             return;
         } else {
-            await fetch("https://ionae.de/mail", {
+            await fetch("/mail", {
                 method: "POST",
                 body: JSON.stringify(formData),
             });
@@ -39,7 +39,9 @@ const ContactForm = () => {
                     Gerne können wir gemeinsam Ihr geplantes Projekt umsetzen 😃
                 </p>
                 <br />
-                <div className={styles.mailContainer}>
+                Telefon: 015112462001 <br />
+                            Mail: <a href="mailto:hello@ionae.de">Jona Kuhn - hello@ionae.de</a>
+                {/* <div className={styles.mailContainer}>
                     <form onSubmit={handleOnSubmit}>
                         <div className={styles.grid}>
                             <div className="flex gap-3">
@@ -93,7 +95,7 @@ const ContactForm = () => {
                         </div>
                     </form>
                     {isActive ? <p className={styles.sendInfo}>Anfrage erfolgreich versendet!</p> : ""}
-                </div>
+                </div> */}
             </div>
         </div>
     );
