@@ -19,9 +19,6 @@ const ContactForm = () => {
             setFormData({
                 name: "",
                 email: "",
-                personCount: "",
-                date: "",
-                time: "",
                 message: "",
             });
             setIsActive((current) => !current);
@@ -37,16 +34,16 @@ const ContactForm = () => {
             </div>
 
             <div className={styles.main}>
-                <h1 class="text-3xl mb-3">Kontakt</h1>
-                <p class="text-md lg:text-xl">
-                    Gerne können wir gemeinsam auf Ihr geplantes Projekt umsetzen 😃
+                <h1 className="text-3xl mb-3">Kontakt</h1>
+                <p className="text-md lg:text-xl">
+                    Gerne können wir gemeinsam Ihr geplantes Projekt umsetzen 😃
                 </p>
                 <br />
                 <div className={styles.mailContainer}>
                     <form onSubmit={handleOnSubmit}>
                         <div className={styles.grid}>
                             <div className="flex gap-3">
-                                <p>
+                                <p className="w-1/2">
                                     <label htmlFor="name">Name</label>
                                     <br />
                                     <input
@@ -60,7 +57,7 @@ const ContactForm = () => {
                                         }
                                     />
                                 </p>
-                                <p>
+                                <p className="w-1/2">
                                     <label htmlFor="email">Email</label>
                                     <br />
                                     <input

@@ -36,10 +36,15 @@ const { title } = Astro.props;
 				class="hidden lg:flex fixed left-1/2 -translate-x-1/2 bg-white rounded-full shadow-own z-10"
 			>
 				<nav class="flex w-[500px] h-10 items-center justify-evenly">
-					<a class="hidden lg:flex" href="/#me">Über mich</a>
-					<a class="hidden lg:flex" href="/#projekte">Projekte</a>
-					<a class="hidden lg:flex" href="/#Kontakt">Kontakt</a>
+					<a class="hidden lg:flex" href="/#hello">Home</a>
+					<a class="hidden lg:flex" href="/Projects">Projekte</a>
+					<a class="hidden lg:flex" href="/#kontakt">Kontakt</a>
 				</nav>
+			</div>
+
+			<div class="h-10 mr-5 ml-auto items-center flex flex-row gap-3">
+				<a href="https://github.com/jonaeku"><img class="h-7" src="github.png" alt="github"></a>
+				<a href="https://www.linkedin.com/in/jona-kuhn-673050239/"><img class="h-7" src="linkedin.png" alt="linkedin"></a>
 			</div>
 		</div>
 
@@ -56,19 +61,22 @@ const { title } = Astro.props;
 					<a href="/#me" onclick="closeMenu()">Über mich</a>
 				</li>
 				<li>
-					<a href="/#projekte" onclick="closeMenu()">Projekte</a>
+					<a href="/Projects" onclick="closeMenu()">Projekte</a>
 				</li>
 				<li>
-					<a href="/Anlaesse" onclick="closeMenu()">Kontakt</a>
+					<a href="/#kontakt" onclick="closeMenu()">Kontakt</a>
 				</li>
 			</ul>
 		</nav>
 
-		<slot />
+		<main class="mx-[5%] lg:ml-[15%] lg:mr-[15%] scroll-mt-20">
+			<slot />
+		</main>
 
-		<br >
-		<br >
-		<br >
+		<footer class="flex w-screen h-16 flex-col items-center justify-center mt-5 gap-1">
+			<p>Made with ❤️ & Astro</p>
+			<a href="Impressum">Impressum & Datenschutz</a>
+		</footer>
 
 		<script is:inline>
 			function closeMenu() {
