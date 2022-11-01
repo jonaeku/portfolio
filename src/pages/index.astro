@@ -8,7 +8,7 @@ import Contact from "../components/ContactForm.jsx";
 ---
 
 <Layout title="JONAKUHN">
-	<main id="hello" class="mx-[5%] lg:ml-[15%] lg:mr-[15%] scroll-mt-20">
+	<main id="hello" class="scroll-mt-[100px]">
 		<div class="h-screen relative">
 			<div
 				class="mr-auto pt-[30%] md:pt-[15%] text-lg md:text-xl lg:text-2xl md:max-w-[60%]"
@@ -45,7 +45,7 @@ import Contact from "../components/ContactForm.jsx";
 		</section>
 		<Separator />
 		<section id="kontakt" class="scroll-mt-[100px]">
-			<Contact />
+			<Contact client:load />
 		</section>
 	</main>
 </Layout>
