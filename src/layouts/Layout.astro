@@ -42,9 +42,15 @@ const { title } = Astro.props;
 				</nav>
 			</div>
 
-			<div class="h-10 mr-5 ml-auto items-center flex flex-row gap-3">
-				<a href="https://github.com/jonaeku"><img class="h-7" src="github.png" alt="github"></a>
-				<a href="https://www.linkedin.com/in/jona-kuhn-673050239/"><img class="h-7" src="linkedin.png" alt="linkedin"></a>
+			<div
+				class="hidden lg:flex h-10 mr-5 ml-auto items-center flex-row gap-3"
+			>
+				<a href="https://github.com/jonaeku"
+					><img class="h-7" src="github.png" alt="github" />
+				</a>
+				<a href="https://www.linkedin.com/in/jona-kuhn-673050239/"
+					><img class="h-7" src="linkedin.png" alt="linkedin" />
+				</a>
 			</div>
 		</div>
 
@@ -66,6 +72,23 @@ const { title } = Astro.props;
 				<li>
 					<a href="/#kontakt" onclick="closeMenu()">Kontakt</a>
 				</li>
+				<li>
+					<div
+						class="flex lg:hidden h-10 mt-[20%] ml-auto items-center flex-row"
+					>
+						<a href="https://github.com/jonaeku"
+							><img class="h-7" src="github.png" alt="github" />
+						</a>
+						<a
+							href="https://www.linkedin.com/in/jona-kuhn-673050239/"
+							><img
+								class="h-7"
+								src="linkedin.png"
+								alt="linkedin"
+							/>
+						</a>
+					</div>
+				</li>
 			</ul>
 		</nav>
 
@@ -73,7 +96,9 @@ const { title } = Astro.props;
 			<slot />
 		</main>
 
-		<footer class="flex w-screen h-16 flex-col items-center justify-center mt-5 gap-1">
+		<footer
+			class="flex w-screen h-16 flex-col items-center justify-center mt-5 gap-1"
+		>
 			<p>Made with ❤️ & Astro</p>
 			<a href="Impressum">Impressum & Datenschutz</a>
 		</footer>
@@ -103,7 +128,6 @@ const { title } = Astro.props;
 					#3788aa7f 45%,
 					#3788aa7f 50%,
 					#ffffff 100%
-					
 				);
 			}
 		</style>
