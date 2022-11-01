@@ -21,7 +21,7 @@ const { img, title, body, link } = Astro.props;
         <img src={`/projects/${img}`} alt="projekte" />
     </a>
     <div class="flex items-center text-lg justify-end mt-1">
-        <a class="flex items-center" href={`${link}`}>
+        <a class="flex items-center" href={`${link}`} target="_blank" rel="noopener noreferrer">
             Website besuchen <img
                 class="h-8 pl-2"
                 src="/icons/right.png"
