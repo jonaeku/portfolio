@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "../styles/ContactForm.module.css";
+import "../pages/mail";
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({});
@@ -12,7 +13,7 @@ const ContactForm = () => {
             alert("Bitte geben Sie beim Senden einer Anfrage Ihre Email an!");
             return;
         } else {
-            await fetch("/mail", {
+            await fetch("mail", {
                 method: "POST",
                 body: JSON.stringify(formData),
             });
@@ -40,7 +41,7 @@ const ContactForm = () => {
                 </p>
                 <br />
                 Telefon: 015112462001 <br />
-                            Mail: <a href="mailto:hello@ionae.de">Jona Kuhn - hello@ionae.de</a>
+                Mail: <a href="mailto:hello@ionae.de">Jona Kuhn - hello@ionae.de</a>
                 {/* <div className={styles.mailContainer}>
                     <form onSubmit={handleOnSubmit}>
                         <div className={styles.grid}>
