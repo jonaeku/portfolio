@@ -37,7 +37,7 @@ const ContactForm = () => {
                 <h1 className="text-3xl mb-3">Kontakt</h1>
                 <p className="text-md lg:text-xl">
                     Gerne können wir gemeinsam Ihr geplantes Projekt umsetzen 😃
-                </p>
+                </p> 
                 <br />
                 <div className="h-[250px] flex items-center justify-center">
                     {!isActive ?
