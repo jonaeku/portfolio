@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "../styles/ContactForm.module.css";
-import "../pages/mail";
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({});
@@ -40,9 +39,9 @@ const ContactForm = () => {
                     Gerne können wir gemeinsam Ihr geplantes Projekt umsetzen 😃
                 </p>
                 <br />
-                Telefon: 015112462001 <br />
-                Mail: <a href="mailto:hello@ionae.de">Jona Kuhn - hello@ionae.de</a>
-                {/* <div className={styles.mailContainer}>
+                {/* Telefon: 015112462001 <br />
+                Mail: <a href="mailto:hello@ionae.de">Jona Kuhn - hello@ionae.de</a> */}
+                <div className={styles.mailContainer}>
                     <form onSubmit={handleOnSubmit}>
                         <div className={styles.grid}>
                             <div className="flex gap-3">
@@ -96,7 +95,7 @@ const ContactForm = () => {
                         </div>
                     </form>
                     {isActive ? <p className={styles.sendInfo}>Anfrage erfolgreich versendet!</p> : ""}
-                </div> */}
+                </div>
             </div>
         </div>
     );
