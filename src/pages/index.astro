@@ -4,7 +4,7 @@ import Benefits from "../components/Benefits.astro";
 import Me from "../components/Me.astro";
 import ProjectLink from "../components/ProjectLink.astro";
 import Separator from "../components/Separator.astro";
-import Contact from "../components/ContactForm.jsx";
+import ContactForm from "../components/ContactForm.jsx";
 ---
 
 <Layout title="JONAKUHN">
@@ -45,7 +45,7 @@ import Contact from "../components/ContactForm.jsx";
 		</section>
 		<Separator />
 		<section id="kontakt" class="scroll-mt-[100px]">
-			<Contact client:load />
+			<ContactForm client:load />
 		</section>
 	</main>
 </Layout>
