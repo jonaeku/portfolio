@@ -12,7 +12,7 @@ const ContactForm = () => {
             alert("Bitte geben Sie beim Senden einer Anfrage Ihre Email an!");
             return;
         } else {
-            await fetch("/mail", {
+            await fetch("/Mail", {
                 method: "POST",
                 body: JSON.stringify(formData),
             });
