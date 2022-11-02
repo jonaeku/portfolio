@@ -41,60 +41,61 @@ const ContactForm = () => {
                 <br />
                 {/* Telefon: 015112462001 <br />
                 Mail: <a href="mailto:hello@ionae.de">Jona Kuhn - hello@ionae.de</a> */}
-                <div className={styles.mailContainer}>
-                    <form onSubmit={handleOnSubmit}>
-                        <div className={styles.grid}>
-                            <div className="flex gap-3">
-                                <p className="w-1/2">
-                                    <label htmlFor="name">Name</label>
+                <div className="h-[250px] flex items-center justify-center">
+                    {!isActive ?
+                        <form onSubmit={handleOnSubmit}>
+                            <div className={styles.grid}>
+                                <div className="flex gap-3">
+                                    <p className="w-1/2">
+                                        <label htmlFor="name">Name</label>
+                                        <br />
+                                        <input
+                                            className={styles.input}
+                                            id="name"
+                                            type="text"
+                                            name="name"
+                                            value={formData.name}
+                                            onChange={(e) =>
+                                                setFormData({ ...formData, name: e.target.value })
+                                            }
+                                        />
+                                    </p>
+                                    <p className="w-1/2">
+                                        <label htmlFor="email">Email</label>
+                                        <br />
+                                        <input
+                                            className={styles.input}
+                                            id="email"
+                                            type="email"
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={(e) =>
+                                                setFormData({ ...formData, email: e.target.value })
+                                            }
+                                        />
+                                    </p>
+                                </div>
+                                <p className="mt-3">
+                                    <label htmlFor="message">Sonstiges</label>
                                     <br />
                                     <input
-                                        className={styles.input}
-                                        id="name"
-                                        type="text"
-                                        name="name"
-                                        value={formData.name}
+                                        className={styles.inputText}
+                                        id="message"
+                                        name="message"
+                                        value={formData.message}
                                         onChange={(e) =>
-                                            setFormData({ ...formData, name: e.target.value })
+                                            setFormData({ ...formData, message: e.target.value })
                                         }
                                     />
                                 </p>
-                                <p className="w-1/2">
-                                    <label htmlFor="email">Email</label>
-                                    <br />
-                                    <input
-                                        className={styles.input}
-                                        id="email"
-                                        type="email"
-                                        name="email"
-                                        value={formData.email}
-                                        onChange={(e) =>
-                                            setFormData({ ...formData, email: e.target.value })
-                                        }
-                                    />
-                                </p>
+                                <button
+                                    className={isActive ? styles.submitActive : styles.submit}
+                                >
+                                    {isActive ? "Gesendet" : "Senden"}
+                                </button>
                             </div>
-                            <p className="mt-3">
-                                <label htmlFor="message">Sonstiges</label>
-                                <br />
-                                <input
-                                    className={styles.inputText}
-                                    id="message"
-                                    name="message"
-                                    value={formData.message}
-                                    onChange={(e) =>
-                                        setFormData({ ...formData, message: e.target.value })
-                                    }
-                                />
-                            </p>
-                            <button
-                                className={isActive ? styles.submitActive : styles.submit}
-                            >
-                                {isActive ? "Gesendet" : "Senden"}
-                            </button>
-                        </div>
-                    </form>
-                    {isActive ? <p className={styles.sendInfo}>Anfrage erfolgreich versendet!</p> : ""}
+                        </form>
+                        : <p className={styles.sendInfo}>Anfrage erfolgreich versendet!</p>}
                 </div>
             </div>
         </div>
