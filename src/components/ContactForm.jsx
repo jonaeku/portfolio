@@ -39,11 +39,9 @@ const ContactForm = () => {
                     Gerne können wir gemeinsam Ihr geplantes Projekt umsetzen 😃
                 </p>
                 <br />
-                {/* Telefon: 015112462001 <br />
-                Mail: <a href="mailto:hello@ionae.de">Jona Kuhn - hello@ionae.de</a> */}
                 <div className="h-[250px] flex items-center justify-center">
                     {!isActive ?
-                        <form onSubmit={handleOnSubmit}>
+                        <form onSubmit={handleOnSubmit} className="w-full">
                             <div className={styles.grid}>
                                 <div className="flex gap-3">
                                     <p className="w-1/2">
