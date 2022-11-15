@@ -31,6 +31,11 @@ import ContactForm from "../components/ContactForm.jsx";
 				src="/me.webp"
 				alt="me"
 			/>
+			<img
+				class="absolute w-14 left-[50%] translate bottom-16 md:bottom-20"
+				src="/scroll.gif"
+				alt="scrollIndicator"
+			/>
 		</div>
 		<section id="leistungen" class="scroll-mt-[100px]">
 			<Benefits />
@@ -79,5 +84,8 @@ import ContactForm from "../components/ContactForm.jsx";
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 1rem;
 		padding: 0;
+	}
+	.translate {
+		transform: translate(-50%, -50%);
 	}
 </style>
