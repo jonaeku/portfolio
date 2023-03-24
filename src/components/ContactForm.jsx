@@ -37,9 +37,13 @@ const ContactForm = () => {
                 <h1 className="text-3xl mb-3">Kontakt</h1>
                 <p className="text-md lg:text-xl">
                     Gerne können wir gemeinsam Ihr geplantes Projekt umsetzen 😃
-                </p> 
+                </p>
                 <br />
-                <div className="h-[250px] flex items-center justify-center">
+                <div className={styles.buttonGroup}>
+                    <a style={{ color: 'black', backgroundColor: 'white', paddingLeft: '15px', paddingRight: '15px', paddingTop: '5px', paddingBottom: '5px', borderRadius: '5px' }} href="mailto:hello@ionae.de?subject=Anfrage Planwagenfahrt">E-Mail 📧</a>
+                    <a style={{ color: 'black', backgroundColor: 'white', paddingLeft: '15px', paddingRight: '15px', paddingTop: '5px', paddingBottom: '5px', borderRadius: '5px' }} href="tel:015112462001">Anruf 📞</a>
+                </div>
+                {/* <div className="h-[250px] flex items-center justify-center">
                     {!isActive ?
                         <form onSubmit={handleOnSubmit} className="w-full">
                             <div className={styles.grid}>
@@ -52,7 +56,7 @@ const ContactForm = () => {
                                             id="name"
                                             type="text"
                                             name="name"
-                                            value={formData.name}
+                                            value={formData.name || ''}
                                             onChange={(e) =>
                                                 setFormData({ ...formData, name: e.target.value })
                                             }
@@ -66,7 +70,7 @@ const ContactForm = () => {
                                             id="email"
                                             type="email"
                                             name="email"
-                                            value={formData.email}
+                                            value={formData.email || ''}
                                             onChange={(e) =>
                                                 setFormData({ ...formData, email: e.target.value })
                                             }
@@ -80,7 +84,7 @@ const ContactForm = () => {
                                         className={styles.inputText}
                                         id="message"
                                         name="message"
-                                        value={formData.message}
+                                        value={formData.message || ''}
                                         onChange={(e) =>
                                             setFormData({ ...formData, message: e.target.value })
                                         }
@@ -94,7 +98,7 @@ const ContactForm = () => {
                             </div>
                         </form>
                         : <p className={styles.sendInfo}>Anfrage erfolgreich versendet!</p>}
-                </div>
+                </div> */}
             </div>
         </div>
     );
