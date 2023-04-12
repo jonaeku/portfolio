@@ -2,14 +2,13 @@ import axios from "axios";
 
 export async function post({ request }) {
   const data = await request.json()
-  console.log(process.env.PUBLIC_MAIL_API);
   axios({
     method: "post",
     url: "https://api.sendinblue.com/v3/smtp/email",
     headers: {
       accept: "application/json",
       "content-type": "application/json",
-      "api-key": import.meta.env.PUBLIC_MAIL_API,
+      "api-key": process.env.PUBLIC_MAIL_API,
     },
     data: {
       sender: { name: data.name, email: data.email },
@@ -26,7 +25,7 @@ export async function post({ request }) {
               <p style="font-size: 18px;">E-Mail: ${data.email}</p><br/>
               <p style="font-size: 18px;">Nachricht von ${data.name}:</p>
               <p style="font-size: 18px;">${data.message}</p>
-            </div>
+            </div>  
             <div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 50px; background-color: #3788aa;">
               <a href="https://ionae.de" style="font-size: 12px; color: white;">ionae.de</a>
             </div>
