@@ -39,11 +39,11 @@ const ContactForm = () => {
                     Gerne können wir gemeinsam Ihr geplantes Projekt umsetzen 😃
                 </p>
                 <br />
-                <div className={styles.buttonGroup}>
+                {/* <div className={styles.buttonGroup}>
                     <a style={{ color: 'black', backgroundColor: 'white', paddingLeft: '15px', paddingRight: '15px', paddingTop: '5px', paddingBottom: '5px', borderRadius: '5px' }} href="mailto:hello@ionae.de?subject=Anfrage Ionae - Webdesign">E-Mail 📧</a>
                     <a style={{ color: 'black', backgroundColor: 'white', paddingLeft: '15px', paddingRight: '15px', paddingTop: '5px', paddingBottom: '5px', borderRadius: '5px' }} href="tel:015112462001">Anruf 📞</a>
-                </div>
-                {/* <div className="h-[250px] flex items-center justify-center">
+                </div> */}
+                <div className="h-[250px] flex items-center justify-center">
                     {!isActive ?
                         <form onSubmit={handleOnSubmit} className="w-full">
                             <div className={styles.grid}>
@@ -98,7 +98,7 @@ const ContactForm = () => {
                             </div>
                         </form>
                         : <p className={styles.sendInfo}>Anfrage erfolgreich versendet!</p>}
-                </div> */}
+                </div>
             </div>
         </div>
     );
