@@ -17,7 +17,7 @@ export async function post({ request }) {
         subject: "Anfrage Webdesign von " + data.name,
         htmlContent: `
           <div style="display: flex; justify-content: center; align-items: center;">
-            <div style="background-color: #f2f2f2; width: 50%; border-radius: 5px;">
+            <div style="background-color: #f2f2f2; width: 100%; border-radius: 5px;">
               <div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 50px; background-color: #3788aa;">
                 <h2 style="text-align: center; color: white;">Anfrage Webdesign</h2><br/>
               </div>
